@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form [formGroup]="signUpPage" (ngSubmit)='submitSignUpDetails()'>
+                <div class="form-center">
+                    <div class="form-group">
+                        <div class="page-header">
+                            <h1> Sign Up </h1>
+                        </div>
+                        <div class="form-group">
+                            <h6>Username</h6>
+                            <input type="text" class="form-control" formControlName="username" placeholder="username">
+                            <p class="help-block" style="color: crimson;"
+                                *ngIf="formControls['username'].touched && formControls['username'].invalid">Please
+                                enter valid username
+                            </p>
+                        </div>
+                        <div class="form-group">
+                            <h6>EmailId</h6>
+                            <input type="text" class="form-control" formControlName="email" placeholder="emailid">
+                            <p class="help-block" style="color: crimson;"
+                                *ngIf="formControls['email'].touched && formControls['email'].invalid">Please enter
+                                valid email</p>
+                        </div>
+                        <div class="form-group">
+                            <h6>Password</h6>
+                            <input type="text" class="form-control" formControlName="password" placeholder="password">
+                            <p class="help-block" style="color: crimson;"
+                                *ngIf="formControls['password'].touched && formControls['password'].invalid">Please enter
+                                valid password
+                            </p>
+                        </div>
+                        <div class="form-group">
+                            <h6>Phone number</h6>
+                            <input type="text" class="form-control" formControlName="phone number"
+                                placeholder="phone number">
+                            <p class="help-block" style="color: crimson;"
+                                *ngIf="formControls['phone number'].touched && formControls['phone number'].invalid">
+                                Please enter valid phone
+                                number</p>
+                        </div>
+                        <div class="d-flex justify-content-between "> <button class="btn btn-primary" type="submit">
+                                Sign Up</button>
+                            <span><button class="btn btn-primary" type="submit" routerLink="/login">
+                                    Back</button></span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
